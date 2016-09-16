@@ -29,6 +29,28 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
 
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
+
+" NERD tree will be loaded on the first invocation of NERDTreeToggle command
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'  }
 "
+" " Multiple commands
+Plug 'junegunn/vim-github-dashboard', { 'on': ['GHDashboard', 'GHActivity']  }
+"
+"" Loaded when clojure file is opened
+Plug 'tpope/vim-fireplace', { 'for': 'clojure'  }
+
+" Multiple file types
+Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme']  }
+"
+" " On-demand loading on both conditions
+Plug 'junegunn/vader.vim',  { 'on': 'Vader', 'for': 'vader'  }
+
+" Code to execute when the plugin is lazily loaded on demand
+Plug 'junegunn/goyo.vim', { 'for': 'markdown'  }
+autocmd! User goyo.vim echom 'Goyo is now loaded!'
+
+Plug 'Shougo/vimproc.vim', { 'do': 'make'  }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py'  }
+
 " " Add plugins to &runtimepath
 call plug#end()"
