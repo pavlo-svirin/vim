@@ -50,7 +50,10 @@ Plug 'junegunn/goyo.vim', { 'for': 'markdown'  }
 autocmd! User goyo.vim echom 'Goyo is now loaded!'
 
 Plug 'Shougo/vimproc.vim', { 'do': 'make'  }
+
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py'  }
+
+Plug 'sjl/gundo.vim'
 
 " " Add plugins to &runtimepath
 call plug#end()"
