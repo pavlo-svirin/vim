@@ -1,20 +1,36 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
+
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
 "
 " " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
+
+Plug 'scrooloose/syntastic'
+
 "
 "" Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
 " Group dependencies, vim-snippets depends on ultisnips
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'pgilad/vim-skeletons'
+Plug 'vim-airline/vim-airline'
 "
 " " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle'  }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure'  }
-"
+Plug 'tpope/vim-fugitive'
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+
 "" Using a non-master branch
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'  }
 
@@ -54,6 +70,16 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make'  }
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py'  }
 
 Plug 'sjl/gundo.vim'
+
+Plug 'vim-scripts/taglist.vim'
+
+Plug 'jiangmiao/auto-pairs'
+
+Plug 'airblade/vim-gitgutter'
+
+Plug 'junegunn/vim-emoji'
+
+Plug 'artur-shaik/vim-javacomplete2'
 
 " " Add plugins to &runtimepath
 call plug#end()"
