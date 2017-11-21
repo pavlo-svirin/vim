@@ -83,6 +83,7 @@ Plug 'artur-shaik/vim-javacomplete2'
 
 Plug 'pearofducks/ansible-vim'
 " install and use neomake linting
+" use :Neomake command to sheck shellscrip syntax
 Plug 'neomake/neomake'
 
 " " Add plugins to &runtimepath
