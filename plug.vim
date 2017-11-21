@@ -81,5 +81,9 @@ Plug 'junegunn/vim-emoji'
 
 Plug 'artur-shaik/vim-javacomplete2'
 
+Plug 'pearofducks/ansible-vim'
+" install and use neomake linting
+Plug 'neomake/neomake'
+
 " " Add plugins to &runtimepath
 call plug#end()"
