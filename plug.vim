@@ -86,5 +86,8 @@ Plug 'pearofducks/ansible-vim'
 " use :Neomake command to sheck shellscrip syntax
 Plug 'neomake/neomake'
 
+Plug 'tpope/vim-surround'
+" then see https://github.com/tpope/vim-surround
+
 " " Add plugins to &runtimepath
 call plug#end()"
