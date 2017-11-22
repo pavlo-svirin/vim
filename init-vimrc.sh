@@ -32,3 +32,8 @@ mv $SOLARIZEDDIR/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 
 rm -rf $SOLARIZEDDIR
 
+# copying .vimrc
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cp $DIR/.vimrc ~
+
+printf '%s\n' 0a 'let path="'$DIR'"' . w | ed -s "~/.vimrc" ;
