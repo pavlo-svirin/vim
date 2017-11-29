@@ -36,4 +36,4 @@ rm -rf $SOLARIZEDDIR
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cp $DIR/.vimrc ~
 
-printf '%s\n' 0a 'let path="'$DIR'"' . w | ed -s "~/.vimrc" ;
+printf '%s\n' 0a 'let path="'$DIR'"' . w | ed  ~/.vimrc ;
